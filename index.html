@@ -34,7 +34,7 @@ Won't compute counts for results
 	<script>
 		
 		var docMod = document.lastModified; // loads last modified time stamp into docMod variable
-			alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
+	
 			console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 		
 		// This defines and initializes the variables by setting the initial value to 0.
@@ -47,42 +47,35 @@ Won't compute counts for results
 		// This function adds a value of 0.5 or 1 to the respective_count variable when run.	
 		function cognitivehalfAdd(){ // adds 0.5 count to cognitive
 			cognitive_count = cognitive_count + 0.5;
-				alert(cognitive_count);
 		}
 		function cognitivewholeAdd() { // adds 1 count to cognitive
 			cognitive_count = cognitive_count + 1;
-				alert(cognitive_count);
 		}
 		function physicalhalfAdd(){ // adds 0.5 count to physical
 			physical_count = physical_count + 0.5;
-				alert(physical_count);
 		}
 		function physicalwholeAdd(){ // adds 1 count to physical
 			physical_count = physical_count + 1;
-				alert(physical_count);
 		}
 		function emotionalhalfAdd(){ // adds 0.5 count to emotional
 			emotional_count = emotional_count + 0.5;
-				alert(emotional_count);
 		}
 		function emotionalwholeAdd(){ // adds 1 count to emotional
 			emotional_count = emotional_count + 1;
-				alert(emotional_count);
+
 		}
 		function sleephalfAdd(){ // adds 0.5 count to sleep
 			sleep_count = sleep_count + 0.5;
-				alert(sleep_count);
 		}
 		function sleepwholeAdd(){ // adds 1 count to cognitive
 			sleep_count = sleep_count + 0.5;
-				alert(sleep_count);
 	        }
 				
 		/* The function calculates the percentage chance of each variable depending on the data inputted. 
 		The variable resultText outputs the calculations done by the function on the results page. */	
 		function result(){
 			var resultText = document.getElementById("result");
-			resultText.innerHTML="Your cognitive count is " + cognitive_count + " out of 10.<br> Your physical count is " + physical_count + " out of 7.<br> Your emotional count is " + emotional_count + " out of 2.5.<br> Your sleep count is " + sleep_count + " out of 2.5."
+			resultText.innerHTML="Your cognitive count is " + cognitive_count + " out of 10.<br> Your physical count is " + physical_count + " out of 6.<br> Your emotional count is " + emotional_count + " out of 2.5.<br> Your sleep count is " + sleep_count + " out of 2.5."
 		} 
 		/* The function will reset the values. */
 		function resetVars(){
