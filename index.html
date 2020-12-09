@@ -24,7 +24,7 @@ Won't compute counts for results
 
 	<head>
 		<t1 style="font-family:arial;">DIY Diagnostics</t1>
-	      <title>Concussion</title>  
+	      <title>Concussion Diagnostic</title>  
 	      <meta name="viewport" content="width=device-width, initial-scale=1">
 	      <meta name="apple-mobile-web-app-capable" content="yes">
 	      <link rel="stylesheet" href="w3.css">
@@ -120,7 +120,7 @@ Won't compute counts for results
 
 	<body>
 	<div id="header" class="w3-container w3-blue-gray">
-		<h1>Are you experiencing a concussion?</h1>
+		<h1>Concussion Diagnosis/h1>
 	</div>
 		
 	<div id="content" class="w3-container">
@@ -130,7 +130,7 @@ Won't compute counts for results
 		<h2>Instructions:</h2>
 			<li>There will be a higher accuracy if patient is assessed by another individual.</li>
                 	<li> If performing a peer-assessment, assist the patient and log the answers appropriately.
-			<li>If performing a self-assessment,  answer truthfully to the best of your ability.</li>
+			<li>If performing a self-assessment, answer truthfully to the best of your ability.</li>
 	
 	<br>
 		<a href="#one" class="w3-btn w3-blue-gray w3-round"> Get Started </a>
@@ -154,18 +154,18 @@ Won't compute counts for results
 			<p class="question"> 1. Are you experiencing a headache or pressure in your head? </p>
 				<!--/ Question 1 --> 
 			<ul class="answers">
-			<input onclick="physicalhalfAdd();" type="radio"name="q1"value="a"id="q1a"><label for="q1a"> Yes</label><br/>
+			<input onclick="physicalwholeAdd();" type="radio"name="q1"value="c"id="q1c"><label for="q1c"> Yes, persistent</label><br/>
+			<input onclick="physicalhalfAdd();" type="radio"name="q1"value="a"id="q1a"><label for="q1a"> Yes, nonpersistent</label><br/>
 			<input type="radio"name="q1"value="b"id="q1b"><label for="q1b"> No</label><br/>
-			<input onclick="physicalwholeAdd();" type="radio"name="q1"value="c"id="q1c"><label for="q1c"> Yes worsening or won't go away</label><br/>
 				<!--Answers to question 1 -->
 			</ul><!--end of question 1 -->
 				
 			<p class="question"> 2. Any nausea or vomiting since the incident?</p>
 				<!--/ Question 2 --> 
 			<ul class="answers">
-			<input onclick="physicalhalfAdd();" type="radio"name="q2"value="a"id="q2a"><label for="q2a"> Yes</label><br/>
+			<input onclick="physicalwholeAdd();" type="radio"name="q2"value="c"id="q2c"><label for="q2c"> Yes, persistent</label><br/>
+			<input onclick="physicalhalfAdd();" type="radio"name="q2"value="a"id="q2a"><label for="q2a"> Yes, nonpersistent</label><br/>
 			<input type="radio"name="q2"value="b"id="q2b"><label for="q2b"> No</label><br/>
-			<input onclick="physicalwholeAdd();" type="radio"name="q2"value="c"id="q2c"><label for="q2c"> Yes repeatedly/persistantly (only answer on 2nd or 3rd take)</label><br/>
 				<!--Answers to question 2 -->
 			</ul><!--end of question 2 -->
 		
@@ -226,7 +226,7 @@ Won't compute counts for results
 		</div>	
 		<div data-role="content">
 					
-			<p class="question"> 8. Was there any loss of consciousness (even briefly)?</p>
+			<p class="question"> 8. Did the patient experience any loss of consciousness?</p>
 				<!--/ Question 8 --> 
 			<ul class="answers">
 			<input onclick="physicalwholeAdd();" type="radio"name="q8"value="a"id="q8a"><label for="q8a"> Yes</label><br/>
@@ -234,7 +234,7 @@ Won't compute counts for results
 				<!--Answers to question 8 -->
 			</ul><!--end of question 8 -->
 			
-			<p class="question"> 9. Did the patient have a seizure or convulsions? (Shaking or twitching)</p>
+			<p class="question"> 9. Did the patient experience any seizures or convulsions?</p>
 				<!--/ Question 9 --> 
 			<ul class="answers">
 			<input onclick="physicalwholeAdd();" type="radio"name="q9"value="a"id="q9a"><label for="q9a"> Yes</label><br/>
@@ -324,7 +324,22 @@ Won't compute counts for results
 				<!--Answers to question 16 -->
 			</ul><!--end of question 16 -->	
 			
-			<p class="question"> 17. Memory: Ask for first and last name and birthday. Check the box if the patient has difficulties completing this test:</p>
+			<p class="question"> 16. Memory: Read the lists of words of words 3 times slowly and tell the patient to remember these and the order.</p>
+				<!--/ Question 16 --> 
+			<ul class="answers">
+				<li> Saddle</li>
+  			        <li> Bubbles</li>
+				<li> Cheese</li>
+				<li> Dog</li>
+			<input type="radio"name="q16"value="a"id="q16a"><label for="q16a"> Successful</label><br/>
+			<input type="radio"name="q16"value="b"id="q16b"><label for="q16b"> Recalls 3/4</label><br/>
+			<input onclick="cognitivehalfAdd();" type="radio"name="q16"value="c"id="q16c"><label for="q16c"> Recalls 2/4</label><br/>
+			<input onclick="cognitivewholeAdd();" type="radio"name="q16"value="d"id="q16d"><label for="q16d"> Recalls 1/4</label><br/>
+			<input onclick="cognitivewholeAdd();" type="radio"name="q16"value="e"id="q16e"><label for="q16e"> Fails</label><br/>
+				<!--Answers to question 16 -->
+			</ul><!--end of question 16 -->	
+			
+			<p class="question"> 17. Memory: Ask for first and last name and birthday.</p>
 				<!--/ Question 17 --> 
 			<ul class="answers">		
 				<input type="radio"name="q17"value="a"id="q17a"><label for="q17a"> Answers correctly</label><br/>
@@ -334,7 +349,7 @@ Won't compute counts for results
 				<!--Answers to question 17 -->
 			</ul><!--end of question 17 -->	
 			
-			<p class="question"> 18. Balance: Stand with eyes closed. Remain balanced for 10 seconds. Check the box if the patient has difficulties completing this test:</p>
+			<p class="question"> 18. Balance: Stand with eyes closed. Remain balanced for 10 seconds.</p>
 				<!--/ Question 18 --> 
 			<ul class="answers">
 				<input type="radio"name="q18"value="a"id="q18a"><label for="q18a"> Successful (full 10 seconds)</label><br/>
@@ -343,7 +358,7 @@ Won't compute counts for results
 				<!--Answers to question 18 -->
 			</ul><!--end of question 18 -->	
 			
-			<p class="question"> 19. Balance: Stand on one leg hands on hips. Gain balance then close eyes. Remain balanced for 5 seconds. Check the box if the patient has difficulties completing this test:</p>
+			<p class="question"> 19. Balance: Stand on one leg hands on hips. Gain balance then close eyes. Remain balanced for 5 seconds.</p>
 				<!--/ Question 19 --> 
 			<ul class="answers">
 				<input type="radio"name="q19"value="a"id="q19a"><label for="q19a"> Successful</label><br/>
@@ -352,7 +367,7 @@ Won't compute counts for results
 				<!--Answers to question 19 -->
 			</ul><!--end of question 19 -->	
 			
-			<p class="question"> 20. Concentration & Reasoning: Say the months of the year backwards. Check the box if the patient has difficulties completing this test:</p>
+			<p class="question"> 20. Concentration & Reasoning: Say the months of the year backwards.</p>
 				<!--/ Question 20 --> 
 			<ul class="answers">
 				<input type="radio"name="q20"value="a"id="q20a"><label for="q20a"> Successful: Systematically performs request (Even if they go through it forwards several times in order to achieve task or miss one month)</label><br/>
@@ -360,7 +375,7 @@ Won't compute counts for results
 				<!--Answers to question 20 -->
 			</ul><!--end of question 20 -->	
 			
-			<p class="question"> 21. Coordination: lightly toss a small, safe,  object the patient (rubber ball, tennis shoe, crumpled paper) 5 times at a distance of 5 feet instruct them first to catch and then lightly toss back in return. Check the box if the patient has difficulties completing this test:</p>
+			<p class="question"> 21. Coordination: lightly toss a small, safe,  object the patient (rubber ball, tennis shoe, crumpled paper) 5 times at a distance of 5 feet instruct them first to catch and then lightly toss back in return.</p>
 				<!--/ Question 21 --> 
 			<ul class="answers">
 				<input type="radio"name="q21"value="a"id="q21a"><label for="q21a"> Successful: 3-5 catches and subsequent returns</label><br/>
@@ -369,7 +384,7 @@ Won't compute counts for results
 				<!--Answers to question 21 -->
 			</ul><!--end of question 21 -->	
 			
-			<p class="question"> 22. Concentration and Reasoning: Count backwards from 100. Check the box if patient is having difficulties completing this test:</p>
+			<p class="question"> 22. Concentration and Reasoning: Count backwards from 100.</p>
 				<!--/ Question 22 --> 
 			<ul class="answers">
 				<input type="radio"name="q22"value="a"id="q22a"><label for="q22a"> Successfuly completes task</label><br/>
@@ -379,7 +394,7 @@ Won't compute counts for results
 				<!--Answers to question 22 -->
 			</ul><!--end of question 22 -->	
 			
-			<p class="question"> 23. Memory: Recite list of words from earlier in order. Check the box if the patient has difficulties completing this test:</p>
+			<p class="question"> 23. Memory: Recite list of words from earlier in order.</p>
 				<!--/ Question 23 --> 
 			<ul class="answers">
 				<li>Saddle</li>
@@ -433,7 +448,7 @@ Won't compute counts for results
 			<p class="question">26. Do you have trouble falling to sleep? </p>
 				<!--/ Question 26 --> 
 			<ul class="answers">
-			<input onclick="sleephalfAdd();" type="radio"name="q26"value="a"id="q26a"><label for="q26a"> Yes</label><br/>
+			<input onclick="sleepwholeAdd();" type="radio"name="q26"value="a"id="q26a"><label for="q26a"> Yes</label><br/>
 			<input type="radio"name="q26"value="b"id="q26b"><label for="q26b"> No</label><br/>
 			<input type="radio"name="q26"value="b"id="q26b"><label for="q26b"> Skip</label><br/>
 				<!--Answers to question 26 -->
